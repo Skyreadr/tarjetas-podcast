@@ -2,27 +2,27 @@
 
 Componentes de tarjetas para visualización de metadatos de podcasts. Diseños modulares, responsivos y personalizables para implementar en plataformas de streaming de audio.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto ofrece componentes frontend para mostrar información de podcasts de manera atractiva y bien organizada. Las tarjetas están diseñadas para presentar metadatos relevantes para los usuarios, como información del show, autores, categorías, descripción y detalles técnicos.
 
-## ✨ Características
+## Características
 
-- Diseño moderno y limpio
+- Diseño sencillo y limpio
 - Totalmente responsivo (adaptable a móviles y tablets)
 - Componentes HTML/CSS puros sin dependencias externas
 - Funcionalidades interactivas con JavaScript vanilla
 - Estructura de código organizada y comentada
 - Fácil de personalizar y adaptar
 
-## 🎯 Casos de uso
+## Casos de uso
 
 - Plataformas de streaming de audio y podcasts
 - Directorios de podcasts
 - Blogs y sitios web sobre podcasts
 - Aplicaciones de descubrimiento de contenido
 
-## 📦 Contenido
+## Contenido
 
 El repositorio incluye:
 
@@ -33,11 +33,11 @@ El repositorio incluye:
 - Ejemplos de personalización
 - Documentación detallada
 
-## 🖼️ Vista previa
+## Vista previa
 
 ![Vista previa de la tarjeta de podcast](https://placeholder-image.com/tarjeta-podcast-preview.jpg)
 
-## 🚀 Cómo usar
+## Cómo usar
 
 1. Clona el repositorio:
 ```bash
@@ -61,7 +61,7 @@ git clone https://github.com/tu-usuario/tarjetas-podcast.git
 }
 ```
 
-## 🧩 Estructura de metadatos
+## Estructura de metadatos
 
 Las tarjetas están diseñadas para mostrar los siguientes tipos de metadatos:
 
@@ -82,7 +82,7 @@ Las tarjetas están diseñadas para mostrar los siguientes tipos de metadatos:
 - Expansión de descripción
 - Valoraciones
 
-## 🎨 Personalización
+## Personalización
 
 Los componentes utilizan variables CSS para facilitar la personalización:
 
@@ -100,13 +100,13 @@ Los componentes utilizan variables CSS para facilitar la personalización:
 
 Modifica estas variables para adaptar las tarjetas a tu paleta de colores.
 
-## 📱 Responsividad
+## Responsividad
 
 Las tarjetas están diseñadas para verse bien en dispositivos de cualquier tamaño:
 - **Escritorio**: Diseño horizontal con toda la información visible
 - **Móvil**: Diseño vertical optimizado para pantallas pequeñas
 
-## 🔜 Próximas mejoras
+## Posibles mejoras
 
 - [ ] Versión con React/Vue
 - [ ] Temas alternativos (claro/oscuro)
@@ -114,11 +114,11 @@ Las tarjetas están diseñadas para verse bien en dispositivos de cualquier tama
 - [ ] Variante con reproductor integrado
 - [ ] Soporte para múltiples idiomas
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## 👥 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir lo que te gustaría cambiar.
 
