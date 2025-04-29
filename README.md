@@ -34,7 +34,7 @@ El repositorio incluye:
 
 ## Vista previa
 
-![Vista previa de la tarjeta de podcast](https://placeholder-image.com/tarjeta-podcast-preview.jpg)
+![Vista previa de la tarjeta de podcast](tarjeta-podcast-preview.png)
 
 ## Cómo usar
 
