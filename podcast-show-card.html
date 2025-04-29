@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Podcast (Show)</title>
+  <style>
+    :root {
+      --primary-color: #8E44AD;
+      --text-color: #333;
+      --light-gray: #f5f5f5;
+      --medium-gray: #e0e0e0;
+      --dark-gray: #666;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 20px;
+      color: var(--text-color);
+    }
+    
+    .podcast-card {
+      max-width: 500px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background-color: white;
+      margin: 20px auto;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      padding: 16px;
+    }
+    
+    .podcast-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .podcast-image-container {
+      flex: 0 0 auto;
+      margin-right: 16px;
+    }
+    
+    .podcast-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    
+    .podcast-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .podcast-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      color: var(--text-color);
+    }
+    
+    .podcast-meta {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--dark-gray);
+    }
+    
+    .podcast-authors, .podcast-producer {
+      margin: 0 0 6px 0;
+      line-height: 1.4;
+    }
+    
+    .podcast-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0;
+    }
+    
+    .category-tag {
+      background-color: var(--light-gray);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--dark-gray);
+    }
+    
+    .podcast-description-container {
+      position: relative;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .podcast-description {
+      margin: 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      transition: all 0.3s ease;
+    }
+    
+    .description-expanded {
+      -webkit-line-clamp: unset;
+    }
+    
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      padding: 0;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 4px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 480px) {
+      .podcast-card {
+        flex-direction: column;
+        padding: 12px;
+      }
+      
+      .podcast-image-container {
+        margin-right: 0;
+        margin-bottom: 12px;
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="podcast-card">
+    <div class="podcast-image-container">
+      <img src="/api/placeholder/120/120" alt="Portada del podcast" class="podcast-image">
+    </div>
+    <div class="podcast-content">
+      <h1 class="podcast-title">Nombre del Podcast</h1>
+      
+      <div class="podcast-meta">
+        <p class="podcast-authors">
+          <strong>Autores:</strong> María García, Juan Pérez
+        </p>
+        <p class="podcast-producer">
+          <strong>Productora:</strong> Estudio Creativo Podcast
+        </p>
+      </div>
+      
+      <div class="podcast-categories">
+        <span class="category-tag">Tecnología</span>
+        <span class="category-tag">Ciencia</span>
+        <span class="category-tag">Innovación</span>
+      </div>
+      
+      <div class="podcast-description-container">
+        <p class="podcast-description" id="description">
+          Este podcast explora las últimas tendencias en tecnología e innovación, entrevistando a expertos del sector y analizando el impacto de los avances tecnológicos en nuestra sociedad. Cada semana, los presentadores comparten perspectivas únicas sobre inteligencia artificial, programación, desarrollo de software y el futuro de la tecnología en diversos ámbitos profesionales.
+        </p>
+        <button class="read-more-btn" id="read-more-btn">Leer más</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Función para expandir/contraer la descripción
+    const descriptionElement = document.getElementById('description');
+    const readMoreBtn = document.getElementById('read-more-btn');
+    
+    readMoreBtn.addEventListener('click', function() {
+      descriptionElement.classList.toggle('description-expanded');
+      
+      if (descriptionElement.classList.contains('description-expanded')) {
+        readMoreBtn.textContent = 'Leer menos';
+      } else {
+        readMoreBtn.textContent = 'Leer más';
+      }
+    });
+    
+    // Ocultar el botón "Leer más" si la descripción no se desborda
+    window.addEventListener('load', function() {
+      if (descriptionElement.scrollHeight <= descriptionElement.clientHeight) {
+        readMoreBtn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
