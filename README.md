@@ -26,8 +26,7 @@ Este proyecto ofrece componentes frontend para mostrar información de podcasts 
 
 El repositorio incluye:
 
-- `podcast-card.html` - Versión básica de la tarjeta (solo episodio)
-- `podcast-show-card.html` - Tarjeta con información del show
+- `podcast-show-card.html` - Tarjeta con información del show (básica)
 - `podcast-show-card-extended.html` - Tarjeta completa con todos los metadatos
 - `podcast-show-card-organized.html` - Versión final con metadatos reorganizados
 - Ejemplos de personalización
